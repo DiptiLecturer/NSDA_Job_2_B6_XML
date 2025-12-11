@@ -23,7 +23,9 @@ class ProfileListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_profile_list)
+
+        binding = ActivityProfileListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         viewModel = ViewModelProvider(this)[UserProfileViewModel::class.java]
 

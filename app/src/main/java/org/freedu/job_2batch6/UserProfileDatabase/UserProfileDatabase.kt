@@ -7,7 +7,8 @@ import androidx.room.RoomDatabase
 import org.freedu.job_2batch6.Model.UserProfile
 import org.freedu.job_2batch6.dao.UserProfileDao
 
-@Database(entities = [UserProfile::class], version = 1, exportSchema = false)
+@Database(entities = [UserProfile::class], version = 1,
+    exportSchema = false)
 abstract class UserProfileDatabase : RoomDatabase() {
 
     abstract fun userProfileDao(): UserProfileDao

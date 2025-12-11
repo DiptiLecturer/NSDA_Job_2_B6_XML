@@ -23,12 +23,15 @@ class ActivityAddProfile : AppCompatActivity() {
     private var isEditMode = false
     private var profileId = 0
     private var currentProfile: UserProfile? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_add_profile)
-        viewModel = ViewModelProvider(this)[UserProfileViewModel::class.java]
 
+        binding = ActivityAddProfileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        viewModel = ViewModelProvider(this)[UserProfileViewModel::class.java]
         isEditMode = intent.getBooleanExtra("IS_EDIT", false)
         profileId = intent.getIntExtra("PROFILE_ID", 0)
 

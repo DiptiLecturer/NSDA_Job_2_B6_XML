@@ -15,7 +15,9 @@ class WelcomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_welcome)
+        enableEdgeToEdge()
+        binding = ActivityWelcomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         binding.btnProfileList.setOnClickListener {
             startActivity(Intent(this, ProfileListActivity::class.java))

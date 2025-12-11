@@ -5,9 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import org.freedu.job_2batch6.databinding.ActivitySingleProfileBinding
 import org.freedu.job_2batch6.viewmodel.UserProfileViewModel
@@ -19,8 +16,9 @@ class ActivitySingleProfile : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_single_profile)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_single_profile)
+
+        binding = ActivitySingleProfileBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         viewModel = ViewModelProvider(this)[UserProfileViewModel::class.java]
 
