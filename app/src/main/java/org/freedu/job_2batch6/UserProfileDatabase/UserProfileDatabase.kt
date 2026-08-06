@@ -25,7 +25,7 @@ abstract class UserProfileDatabase : RoomDatabase() {
                     UserProfileDatabase::class.java,
                     "user_profile_database"
                 )
-                    .fallbackToDestructiveMigration(false) // handles version upgrades gracefully
+                    .fallbackToDestructiveMigration(false)
                     .build()
                     .also { INSTANCE = it }
             }

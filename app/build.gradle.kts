@@ -51,6 +51,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // androidx.startup for InitializationProvider
+    implementation("androidx.startup:startup-runtime:1.1.1")
     //room
     ksp("androidx.room:room-compiler:2.8.3")
     implementation("androidx.room:room-runtime:2.8.3")

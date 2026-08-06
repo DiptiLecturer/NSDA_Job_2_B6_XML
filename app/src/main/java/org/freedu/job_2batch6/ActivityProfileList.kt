@@ -31,7 +31,6 @@ class ActivityProfileList : AppCompatActivity() {
         setupRecyclerView()
         observeViewModel()
 
-        // FAB → go to Add Profile
         binding.fabAddProfile.setOnClickListener {
             startActivity(Intent(this, ActivityAddProfile::class.java))
         }
