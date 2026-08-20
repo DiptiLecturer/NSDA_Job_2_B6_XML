@@ -1,6 +1,12 @@
 **Project Requirements**
 **Use proper Architectural Components or Android Jetpack Components. For
 example, View Model, Live Data, Data Binding etc. Use MVVM.
+Application will start with a welcome screen with profile list button. After click
+profile list button then open profile list screen. After that, the user can add his
+profile information. Every user can add his personal information like name, email,
+date of birth, district, Mobile etc.. There should be a Profile Screen where the
+user information will be shown. User should also be able to update and delete his
+information.
 Job Specification Information:**
 1. Create a new Android Studio project and name it UserProfileRegistration
 2. Add necessary dependencies-
